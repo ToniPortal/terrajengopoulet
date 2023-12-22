@@ -1,0 +1,14 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend/gopoulet-backend
+    ports:
+      - "3000:3000"
+
+  frontend:
+    restart: no
+    build:
+      context: ./frontend/gopoulet
+    ports:
+      - "5173:5173"
